@@ -19,10 +19,16 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "About | Sycamore Pain Clinic"
   end
 
-  test "should get help" do
-    get static_pages_help_url
+  test "should get providers" do
+    get static_pages_providers_url
     assert_response :success
-    assert_select "title", "Help | Sycamore Pain Clinic"
+    assert_select "title", "Providers | Sycamore Pain Clinic"
+  end
+
+   test "should get procedures" do
+    get static_pages_procedures_url
+    assert_response :success
+    assert_select "title", "Procedures | Sycamore Pain Clinic"
   end
 
   test "should get contact" do
