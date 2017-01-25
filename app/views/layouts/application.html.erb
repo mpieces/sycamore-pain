@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sycamore</title>
+    <title><%= yield(:title) %> | Sycamore Pain Clinic</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,143 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <header>
+          <nav>
+            <ul>
+              <!-- RIGHT ALIGN UPPER: -->
+              <li><img src="assets/phone-icon.png"></li>
+              <li><span style="color:black;">(812) 242-3005</span></li>
+              <li><a class="btn" href="#request-appt-form">Request an Appointment</a></li>
+            </ul>
+
+          <!-- RIGHT ALIGN LOWER: -->
+            <ul>
+                <!-- left align logo -->
+              <li id="logo">
+                <h2>Sycamore Pain Clinic</h2>
+              </li>
+              <li><%= link_to "About Us", '#' %></li>
+                <div class="dropdown">
+                  <li><a href="#"><span class="nolink">Our Providers</span></a></li>
+
+                    <ul class="dropdown-content">
+                      <li><%= link_to "Thomas M. Pendergast, MD", '#' %></li>
+                      <li><%= link_to "Jennifer Hardy, MD", '#' %></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                  <li><a href='#'><span class="nolink">Procedures</span></a></li>
+                    <ul class="dropdown-content">
+                      <li><a href="#">Epidural Steroid Injections</a></li>
+                      <li><a href="#">Facet Injections</a></li>
+                      <li><a href="#">Rhizotomies</a></li>
+                      <li><a href="#">SI Joint Injections</a></li>
+                      <li><a href="#">Trigger Point Injections</a></li>
+                    </ul>
+                </div>
+             <!--  <li><a href="staff.html">Staff</a></li>
+                <div class="dropdown">
+                  <li><a href='#'><span class="nolink">About</span></a></li>
+                    <ul class="dropdown-content">
+                      <li><a href="#">Why Choose PT Pros</a></li>
+                      <li><a href="#">Testimonials</a></li>
+                      <li><a href="#">Community Involvement</a></li>
+                      <li><a href="#">Careers</a></li>
+                    </ul>
+                </div> -->
+              <li><%= link_to "Contact Us", '#' %></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+
+
+
+
+    <!-- ***************FOOTER********************************************* -->
+   <footer>
+    <div class="footer-upper">
+      <div class="footer-upper-wrapper">
+        <!-- <div class="container-fluid"> -->
+          <!-- LEFT SECTION OF UPPER FOOTER: -->
+          <div class="col-md-5">
+            <div class="box-3">
+              <a class="btn" href="#"><strong>Employee Portal</strong></a>
+              <a href="#"><img src="assets/fb.png" target="_blank"></a>
+              <a href="#"><img src="assets/twitter.png"></a>
+              <a href="#"><img src="assets/linkedin.png"></a>
+              <a href="#"><img src="assets/instagram.png"></a>
+            </div>
+          </div>
+           <!-- MIDDLE SECTION OF UPPER FOOTER: -->
+          <div class="col-md-2">
+            <div class="box-2 text-center">
+              <p>CALL US</p>
+              <p><strong>(812) 242-3005</strong></p>
+            </div>
+          </div>
+         <!-- RIGHT SECTION OF UPPER FOOTER: -->
+          <div class="row">
+          <div class="col-md-5">
+            <div class="box-1">
+              <div class="logo">
+                <img src="#" alt="Sycamore" width="160"/>
+              </div>
+              <div class="address">
+                <p>Sycamore Pain Clinic</br>
+                1725 N 5<sup>th</sup> Street</br>
+                Terre Haute, IN 47804</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     <!--  </div> -->
+      </div>
+    </div>
+<!-- LOWER FOOTER: -->
+   <!--  <div class="footer-lower"> -->
+      <!-- FIRST ROW OF LOWER FOOTER -->
+   <!--    <div class="row">
+        <div class="col-md-12 partnerships">
+          <p class="text-center"><strong>OUR PARTNERSHIPS</strong></p>
+        </div>
+      </div> -->
+          <!-- SECOND ROW OF LOWER FOOTER -->
+     <!--  <div class="row">
+        <div class="col-md-12">
+          <div class="logos">
+            <img src="assets/footer-icons/APTA.png"/>
+            <img src="assets/footer-icons/KPTA.png"/>
+            <img src="assets/footer-icons/WorkWell.png"/>
+            <img src="assets/footer-icons/WorkSteps.png"/></a>
+            <img src="assets/footer-icons/UnderArmour.png"/></a>
+            <img src="assets/footer-icons/pps-logo.png">
+          </div>
+        </div>
+       </div> -->
+     <!--  </div> -->
+    </footer>    <!-- end of footer -->
+  <!-- </div>         end of MAIN container-fluid div -->
+       <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+   <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="application.js"></script>
+  </body>
+</html>
   </body>
 </html>
