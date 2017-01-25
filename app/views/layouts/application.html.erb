@@ -15,7 +15,7 @@
           <nav>
             <ul>
               <!-- RIGHT ALIGN UPPER: -->
-              <li><img src="assets/phone-icon.png"></li>
+              <li><img src="/assets/phone-icon.png"></li>
               <li><span style="color:black;">(812) 242-3005</span></li>
               <li><a class="btn" href="#request-appt-form">Request an Appointment</a></li>
             </ul>
@@ -23,12 +23,13 @@
           <!-- RIGHT ALIGN LOWER: -->
             <ul>
                 <!-- left align logo -->
-              <li id="logo">
+              <!-- <li id="logo">
                 <h2>Sycamore Pain Clinic</h2>
-              </li>
-              <li><%= link_to "About Us", '#' %></li>
+              </li> -->
+              <li><h2><%= link_to "Sycamore Pain Clinic", root_path, id: "logo" %></li></h2>
+              <li><%= link_to "About Us", about_path %></li>
                 <div class="dropdown">
-                  <li><a href="#"><span class="nolink">Our Providers</span></a></li>
+                  <li><%= link_to "Our Providers", providers_path %></li>
 
                     <ul class="dropdown-content">
                       <li><%= link_to "Thomas M. Pendergast, MD", '#' %></li>
@@ -36,26 +37,16 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                  <li><a href='#'><span class="nolink">Procedures</span></a></li>
+                  <li><%= link_to "Procedures", procedures_path %></li>
                     <ul class="dropdown-content">
-                      <li><a href="#">Epidural Steroid Injections</a></li>
+                      <li><%= link_to "Epidural Steroid Injections", procedures_esi_path %></li>
                       <li><a href="#">Facet Injections</a></li>
                       <li><a href="#">Rhizotomies</a></li>
                       <li><a href="#">SI Joint Injections</a></li>
                       <li><a href="#">Trigger Point Injections</a></li>
                     </ul>
                 </div>
-             <!--  <li><a href="staff.html">Staff</a></li>
-                <div class="dropdown">
-                  <li><a href='#'><span class="nolink">About</span></a></li>
-                    <ul class="dropdown-content">
-                      <li><a href="#">Why Choose PT Pros</a></li>
-                      <li><a href="#">Testimonials</a></li>
-                      <li><a href="#">Community Involvement</a></li>
-                      <li><a href="#">Careers</a></li>
-                    </ul>
-                </div> -->
-              <li><%= link_to "Contact Us", '#' %></li>
+              <li><%= link_to "Contact Us", contact_path %></li>
             </ul>
           </nav>
         </header>
@@ -79,10 +70,10 @@
           <div class="col-md-5">
             <div class="box-3">
               <a class="btn" href="#"><strong>Employee Portal</strong></a>
-              <a href="#"><img src="assets/fb.png" target="_blank"></a>
-              <a href="#"><img src="assets/twitter.png"></a>
-              <a href="#"><img src="assets/linkedin.png"></a>
-              <a href="#"><img src="assets/instagram.png"></a>
+              <a href="#"><img src="/assets/fb.png" target="_blank"></a>
+              <a href="#"><img src="/assets/twitter.png"></a>
+              <a href="#"><img src="/assets/linkedin.png"></a>
+              <a href="#"><img src="/assets/instagram.png"></a>
             </div>
           </div>
            <!-- MIDDLE SECTION OF UPPER FOOTER: -->
