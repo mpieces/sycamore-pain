@@ -5,7 +5,7 @@
       <!-- (HERO) -->
       <div class="row">
         <section>
-          <div class="category-hero" style="background-image: asset-url("doctors-header.jpg")">
+          <div class="category-hero" style="background-image: url(<%= asset_path 'doctors-header.jpg' %>)">
             <div class="hero-header-2">Meet Our Staff</div>
          </div>
         </section>
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-md-12">
           <p class="text-center"><%= link_to "Home", root_url %>
-          <%= image_tag("arrow.png"), class: "arrow" %>
+          <%= image_tag("arrow.png", class: "arrow") %>
           Staff
           </p>
         </div>
