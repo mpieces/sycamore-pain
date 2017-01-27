@@ -4,7 +4,7 @@
 <!-- (HERO) -->
     <div class="row">
       <section>
-        <div class="category-hero" style="background-image: <%= image_tag ("category-hero-photo.png") %>">
+        <div class="category-hero" style="background-image: <%= image_tag('category-hero-photo.png') %>">
           <div class="hero-header-2">About Us</div>
        </div>
       </section>
@@ -16,7 +16,7 @@
   <div class="row">
           <div class="col-md-12">
             <p class="text-center link-map"><%= link_to "Home", root_path %>
-              <%= image_tag ("arrow.png"), class: "arrow" %>
+              <%= image_tag("arrow.png"), class: "arrow" %>
               About us
             </p>
              <!-- <div class="box-wrapper"> -->
@@ -57,6 +57,7 @@
         <div class="row">
         <div class="category-wrapper">
             <div class="list-group">
+              <!-- CHANGE THESE TO LINK_TO? -->
               <a href="#" class="list-group-item">Orthopedic/Spine</a>   <!-- active? -->
               <a href="#" class="list-group-item">Industrial Services</a>
               <a href="ptpros_content.html" class="list-group-item">Sports Medicine</a>
@@ -66,7 +67,7 @@
             </div>
 
             <div class="category-image">
-              <img src="assets/category-image.png"/>
+              <%= image_tag("category-image.png") %>
             </div>
          </div>
        </div>
