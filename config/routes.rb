@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'calendar/show'
 
   root 'static_pages#home'
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   get '/procedures' => 'static_pages#procedures'
   get '/procedures/esi' => 'static_pages#esi'
   get '/contact' => 'static_pages#contact'
+
+  get 'request-appt' => 'requests#new', as: 'new_request'
+  post 'request-appt' => 'requests#show', as: 'create_request'
 
   resource :calendar, only: [:show], controller: :calendar
   root to: "calendar#show"

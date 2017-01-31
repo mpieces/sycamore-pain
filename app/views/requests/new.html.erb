@@ -1,0 +1,11 @@
+<%= form_for @request, url: create_request_url do |f| %>
+  <%= notice %>
+  <%= @request.errors.full_messages.join(', ') %>
+
+  <%= f.text_field :first_name, placeholder: 'First name' %>
+  <%= f.text_field :last_name, placeholder: 'Last name' %>
+  <%= f.email_field :email, placeholder: 'Email' %>
+  <%= f.text_field :phone, placeholder: 'Phone number' %>
+  <%= f.text_area :comments, placeholder: 'Comments' %>
+  <%= f.submit 'Send' %>
+<% end %>

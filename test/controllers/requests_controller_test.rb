@@ -11,7 +11,7 @@ class RequestsControllerTest < ActionDispatch::IntegrationTest
       assert_select 'input[type=text]'
       assert_select 'input[type=text]'
       assert_select 'input[type=email]'
-      assert_select 'input[type=phone]'
+      assert_select 'input[type=text]'
       assert_select 'textarea'
       assert_select 'input[type=submit]'
     end
